@@ -90,7 +90,7 @@ module RedmineIssueAssignNotice
 
       noteice_field = assgined_to.custom_field_values.find{ |field| field.custom_field.name == 'Assign Notice ID' }
       if noteice_field.nil? || noteice_field.value.blank?
-        return nil
+        return assgined_to.login
       end
 
       noteice_field.value
